@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/iconoElPilar.png" type="image/png" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/admin/admin.css">
+    <title>Panel</title>
+</head>
+<body>
+
+    <a href="https://mlagundiaelpilar.org/es/" target="_blank" rel="noopener noreferrer" ><img id="logo2"src="/images/logo.png"></a>
+
+    <div class="panel-buttons">
+        <div id="box1">
+            <i class='bx bxs-radio'></i>
+            <a href="/admin.html" class="panel-button">Panel Radio</a>
+        </div>
+        
+        <div id="box2">
+            <i class='bx bx-podcast' ></i>
+            <a href="/admin-podcast.html" class="panel-button">Panel Podcast</a>
+        </div>
+
+        <div id="box3">
+            <i class='bx bxs-home'></i>
+            <a href="/index.html" class="panel-button">Radio Escolar</a>
+        </div>
+      </div>
+      
+
+    <script>
+
+        document.getElementById('box1').addEventListener('click', () => {
+        window.location.href = '/admin.html';
+        });
+        document.getElementById('box2').addEventListener('click', () => {
+        window.location.href = '/admin-podcast.html';
+        });
+
+
+        document.getElementById('box3').addEventListener('click', () => {
+        fetch('/radio')
+            .then(response => {
+            if (response.redirected) {
+                // Si el servidor redirige, vamos a la nueva URL
+                window.location.href = response.url;
+            } else {
+                // Si no hay redirección, puedes manejar aquí
+                console.log('No hubo redirección');
+            }
+            })
+            .catch(err => console.error('Error en fetch:', err));
+        });
+
+    </script>
+
+</body>
+</html>

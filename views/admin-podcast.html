@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/images/iconoElPilar.png" type="image/png" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Panel del Locutor</title>
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+    
+    <div class="admin-panel">
+        <a href="https://mlagundiaelpilar.org/es/" target="_blank" rel="noopener noreferrer"  ><img id="logo" src="/images/logo.png"></a>
+        <h1><i class='bx bx-podcast' ></i> Programa tu podcast</h1>
+
+    <form action="/upload-podcast" method="POST" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="Título del podcast" required />
+        <textarea name="description" placeholder="Descripción del podcast" required></textarea>
+      
+        <label id="label-date" for="scheduleTime">Fecha y hora de emisión:</label>
+        <input type="datetime-local" id="schedule" name="schedule" required />
+        
+      
+        <!-- DROP ZONE PARA IMAGEN -->
+        <label>Imagen:</label>
+        <div id="podcast-image-drop" class="drop-zone">
+          Arrastra la imagen aquí<br>o haz clic<br><br>
+          <i class='bx bxs-hand-up icon-float'></i>
+        </div>
+        <input type="file"
+               id="podcast-image-input"
+               name="image"
+               accept="image/*"
+               style="display:none"
+               required />
+      
+        <!-- DROP ZONE PARA AUDIO -->
+        <label>Audio:</label>
+        <div id="podcast-audio-drop" class="drop-zone">
+          Arrastra el audio aquí<br>o haz clic<br><br>
+          <i class='bx bxs-hand-up icon-float'></i>
+        </div>
+        <input type="file"
+               id="podcast-audio-input"
+               name="audio"
+               accept="audio/mpeg"
+               style="display:none"
+               required />
+        
+        <div class="btn-form">
+        <button type="submit">Subir Podcast</button>
+        <div id="btns">
+          <button id="eliminar" type="button">Eliminar Podcast Actual</button>
+          <button id="consultar-hora" type="button" class="button-secondary">Consultar Programación</button>
+        </div>
+        </div>
+      </form>
+    </div>
+
+    <div id="bottom-btn">
+      <button id="return">Accede a la radio</button>
+      <button id="access">Volver atrás</button>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+      <div class="modal">
+        <header class="modal-header">
+          <h2>Información del Podcast</h2>
+          <button id="modal-close" class="modal-close">&times;</button>
+        </header>
+        <div class="modal-body">
+          <p><strong>Título:</strong> <span id="modal-title"></span></p>
+          <p><strong>Programado para:</strong> <span id="modal-schedule"></span></p>
+          <p><strong>Duración:</strong> <span id="modal-duration"></span></p>
+          <p  id="modal-remain2" class="hidden"><strong>Tiempo restante:</strong> <span id="modal-remain"></span></p>
+        </div>
+        <footer class="modal-footer">
+          <button id="modal-ok" type="button">Cerrar</button>
+        </footer>
+      </div>
+    </div>
+      
+
+  <script src="admin/podcast.js"></script>
+  
+</body>
+</html>

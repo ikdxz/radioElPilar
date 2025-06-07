@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radio El Pilar</title>
+  <link rel="icon" href="/images/iconoElPilar.png" type="image/png" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/radio/radio.css">
+</head>
+<body>
+
+  <div class="radio-ui">
+    <a href="https://mlagundiaelpilar.org/es/" target="_blank" rel="noopener noreferrer"  ><img id="logo" src="/images/logo.png"></a>
+    <div id="img-container">
+    <img id="program-image" src="/images/offstream.png" alt="Imagen del programa">
+    </div>
+
+    <div id="text">
+      <h1 id="program-title">Cargando título...</h1>
+      <p id="program-description">Cargando descripción...</p>
+    </div>
+  
+    <audio id="audio-player" src="http://172.26.0.16:8000/stream"></audio>
+
+    <div id="audio-control">
+      <button id="rewind" class="back-go"><i class='bx bx-rewind' ></i></button>
+      <button id="play-pause"><i class='play-pause bx bx-play'></i></button>
+      <button id="fast-forward" class="back-go"><i class='bx bx-fast-forward' ></i></button>
+    </div>
+  </div>
+
+  <script src="/radio/radio.js"></script>
+
+</body>
+</html>

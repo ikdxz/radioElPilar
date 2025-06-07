@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body {
+    height: 100vh;
+    background-color: #141a20;
+    display: grid;
+    align-items: center;
+}
+
+#logo {
+    width: 80px;
+    margin-bottom: 10px;
+    display: grid;
+    align-content: center;
+
+}
+
+#img-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#program-image {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 24px;
+    transition: transform 0.3s ease;
+}
+
+#program-image:hover {
+    cursor: none;
+    transform: scale(1.05);
+}
+
+.radio-ui {
+    background-color: rgb(20, 26, 32);
+    width: 30%;
+    border-radius: 20px;
+    padding: 30px 40px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+}
+
+.radio-ui, #program-image {
+  animation: boxShadowColorChange 20s linear infinite;
+}
+
+@keyframes boxShadowColorChange {
+  0%   { box-shadow: 0 0 20px #c9289e; }  
+  16%  { box-shadow: 0 0 20px #289ec9; }
+  32%  { box-shadow: 0 0 20px #28c99e; }
+  48%  { box-shadow: 0 0 20px #f9a825; }
+  64%  { box-shadow: 0 0 20px #e91e63; }
+  80%  { box-shadow: 0 0 20px #673ab7; }
+  100% { box-shadow: 0 0 20px #c9289e; }
+}
+
+#text {
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    color: white;
+}
+#text h1{
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+#text p{
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+#play-pause {
+    border: none;
+    padding: 5px;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    animation: colorChange 20s linear infinite, boxShadowColorChange 20s linear infinite;
+}
+
+#play-pause:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    animation: colorChange 20s linear infinite, boxShadowColorChange 20s linear infinite;
+}
+
+i {
+    font-size: 3.2em;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+i:hover {
+    color: #3e3e3e;
+}
+
+.back-go {
+    background: none;
+    border: none;
+}
+
+.bx-rewind, .bx-fast-forward {
+    color: hsla(0, 0%, 95%, 0.671);
+}
+
+.bx-rewind:hover, .bx-fast-forward:hover {
+    color: hsla(0, 3%, 47%, 0.671);
+    cursor: pointer;
+}
+
+button:focus {
+  
+  border: none;
+  outline: none;
+
+}
+
+
+
+@keyframes colorChange {
+  0%   { background-color: #c9289e; }  
+  16%  { background-color: #289ec9; }
+  32%  { background-color: #28c99e; }
+  48%  { background-color: #f9a825; }
+  64%  { background-color: #e91e63; }
+  80%  { background-color: #673ab7; }
+  100% { background-color: #c9289e; }
+}
+
+/* Small devices (phones, up to 600px) */
+@media (max-width: 600px) {
+  .radio-ui {
+    width: 90%;           /* ocupa casi todo el ancho */
+    padding: 20px 15px;   /* reduce padding */
+    gap: 15px;
+  }
+  #program-image {
+    width: 160px;
+    height: 160px;
+  }
+  #text h1 {
+    font-size: 1.4rem;
+  }
+  #text p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  #play-pause i {
+    font-size: 2.4em;
+  }
+  .back-go i {
+    font-size: 2em;
+  }
+}
+
+/* Medium devices (tablets, 601–900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .radio-ui {
+    width: 70%;
+    padding: 25px 30px;
+    gap: 18px;
+  }
+  #program-image {
+    width: 200px;
+    height: 200px;
+  }
+  #text h1 {
+    font-size: 1.6rem;
+  }
+  #text p {
+    font-size: 1rem;
+  }
+  #play-pause i {
+    font-size: 2.8em;
+  }
+  .back-go i {
+    font-size: 2.4em;
+  }
+}
+
+
+@media (min-width: 1920px) {
+  .radio-ui {
+    width: 18%;
+    padding: 25px 30px;
+    gap: 18px;
+
+}
+
+}
