@@ -31,18 +31,25 @@ Ce projet est une **solution élégante et minimaliste** pour gérer une radio s
 - **Authentification** : Middleware Express avec un utilisateur/mot de passe simple  
 
 ---
-📝 Utilisation
-- Page publique (/)
+## 📝 Utilisation
 
-  - Affiche le player : live, podcast ou LoFi selon disponibilité.
+- 🌐 **Page publique** (`/`)  
+  - 🎧 Affiche le **player** selon la disponibilité : *Live*, *Podcast* ou *LoFi*.
 
-- Page admin (/login.html)
+- 🔐 **Page de connexion** (`/login.html`)  
+  - Connexion via **utilisateur** / **mot de passe** configurés.
 
-  - Connexion avec l’utilisateur/mot de passe configurés.
-
-  - Boutons pour « Démarrer le direct », « Arrêter le direct ».
-
-  - Sélecteur de fichier podcast (seul l’épisode actif sera diffusé).
+    - 🎙️ **Page admin Live** (`/admin.html`)  
+      - Sélecteur de fichier **Live** :  
+        - *Titre*  
+        - *Description*  
+        - *Image*
+    
+    - 🎙️ **Page admin Podcast** (`/adminPodcast.html`)  
+      - Sélecteur de fichier **Podcast** (un seul épisode actif à la fois) :  
+        -  *Titre*  
+        -  *Description*  
+        -  *Image*
 
 🔒 Sécurité & Limites
 
