@@ -1,5 +1,9 @@
 # 🏫 Radio Scolaire « El Pilar »
 
+<p align="center">
+<img src="./afficheElPilar/QRRadioElPilar.png" alt="Logo" width="300" style/>
+</p>
+
 Ce projet est une **solution élégante et minimaliste** pour gérer une radio scolaire au collège El Pilar, combinant diffusion en direct via Icecast et publication de podcasts. Il a été développé avec un **backend Node.js** et un **frontend HTML/CSS/JS**, et inclut une interface d’administration pour piloter la diffusion.
 
 ---
