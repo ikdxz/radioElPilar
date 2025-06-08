@@ -1,8 +1,11 @@
 # 🏫 Radio Scolaire « El Pilar »
 
 <p align="center">
-<img src="./afficheElPilar/QRRadioElPilar.png" alt="Logo" width="300" style/>
+  <img src="./afficheElPilar/QRRadioElPilar.png" alt="QR Radio El Pilar" width="300"/>
+  <br><br>
+  <img src="./screenshots/index.png" alt="Captura de la página de inicio" width="300"/>
 </p>
+
 
 Ce projet est une **solution élégante et minimaliste** pour gérer une radio scolaire au collège El Pilar, combinant diffusion en direct via Icecast et publication de podcasts. Il a été développé avec un **backend Node.js** et un **frontend HTML/CSS/JS**, et inclut une interface d’administration pour piloter la diffusion.
 
@@ -38,22 +41,36 @@ Ce projet est une **solution élégante et minimaliste** pour gérer une radio s
 ## 📝 Utilisation
 
 - 🌐 **Page publique** (`/`)  
-  - 🎧 Affiche le **player** selon la disponibilité : *Live*, *Podcast* ou *LoFi*.
+  - 🎧 Affiche le **player** selon la disponibilité : *Live*, *Podcast* ou *LoFi*.<p align="center">
+    <img src="./screenshots/index.png" alt="index.html" width="300"/>
+  </p>
+  
 
 - 🔐 **Page de connexion** (`/login.html`)  
-  - Connexion via **utilisateur** / **mot de passe** configurés.
+  - Connexion via **utilisateur** / **mot de passe** configurés.<p align="center">
+    <img src="./screenshots/login.png" alt="index.html" width="300"/>
+    <br><br>
+    <img src="./screenshots/access.png" alt="access.html" width="500"/>
+  </p>
 
-    - 🎙️ **Page admin Live** (`/admin.html`)  
+    - 🎙️ **Page admin Live** (`/admin.html`)
       - Sélecteur de fichier **Live** :  
         - *Titre*  
         - *Description*  
         - *Image*
+      <p align="center">
+        <img src="./screenshots/admin.png" alt="admin.html" width="300"/>
+      </p> 
+      
     
     - 🎙️ **Page admin Podcast** (`/admin-podcast.html`)  
       - Sélecteur de fichier **Podcast** (un seul épisode actif à la fois) :  
         -  *Titre*  
         -  *Description*  
         -  *Image*
+          <p align="center">
+           <img src="./screenshots/admin-podcast.png" alt="admin-podcast.html height="10"/>
+          </p> 
 
 🔒 Sécurité & Limites
 
