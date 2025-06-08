@@ -45,7 +45,7 @@ Ce projet est une **solution élégante et minimaliste** pour gérer une radio s
         - *Description*  
         - *Image*
     
-    - 🎙️ **Page admin Podcast** (`/adminPodcast.html`)  
+    - 🎙️ **Page admin Podcast** (`/admin-podcast.html`)  
       - Sélecteur de fichier **Podcast** (un seul épisode actif à la fois) :  
         -  *Titre*  
         -  *Description*  
