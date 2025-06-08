@@ -17,6 +17,7 @@ const FALLBACK_URL = '/audio/lofi.mp3';
 require('dotenv').config();
 
 const app = express();
+const PORT = process.env.port || 8080;
 
 // Configuración de sesión
 app.use(session({
@@ -62,14 +63,15 @@ const uploadPodcast = multer({ storage: podcastStorage });
 // Ruta login
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
-  // Cambia esto por lo que tú quieras
-  if (username === process.env.user && password === process.env.passwd) {
+
+  if ((username === (process.env.user || 'radioElPilar')) && (password === (process.env.passwd || 'ElPilar2025'))) {
     req.session.loggedIn = true;
     res.redirect('/access.html');
   } else {
     res.send('Credenciales incorrectas. <a href="/login.html">Volver</a>');
   }
 });
+
 
 // Ruta logout
 app.get('/logout', (req, res) => {
@@ -276,6 +278,6 @@ app.post('/clear-podcast', requireLogin, (req, res) => {
 
 
 
-app.listen(process.env.port, () => {
-  console.log(`🎧 Radio app protegida en http://localhost:${process.env.port}`);
+app.listen(PORT, () => {
+  console.log(`🎧 Radio app protegida en http://localhost:${PORT}`);
 });
